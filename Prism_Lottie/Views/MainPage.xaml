@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Prism_Lottie.Views.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+    Title="{Binding Title}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Button
+            Grid.Row="0"
+            Margin="30"
+            Command="{Binding ClickCommand}"
+            Text="Click" />
+
+        <StackLayout
+            Grid.Row="1"
+            Margin="5,0"
+            HorizontalOptions="FillAndExpand"
+            Orientation="Horizontal">
+
+            <Button
+                Command="{Binding PlayCommand}"
+                CommandParameter="{x:Reference animationView}"
+                HorizontalOptions="FillAndExpand"
+                Text="Play" />
+
+            <Button
+                Command="{Binding PauseCommand}"
+                CommandParameter="{x:Reference animationView}"
+                HorizontalOptions="FillAndExpand"
+                Text="Pause" />
+
+            <Button
+                Command="{Binding CancelCommand}"
+                CommandParameter="{x:Reference animationView}"
+                HorizontalOptions="FillAndExpand"
+                Text="Cancel" />
+
+            <Button
+                Command="{Binding ResumeCommand}"
+                CommandParameter="{x:Reference animationView}"
+                HorizontalOptions="FillAndExpand"
+                Text="Resume" />
+
+
+        </StackLayout>
+
+        <forms:AnimationView
+            x:Name="animationView"
+            Grid.Row="2"
+            Margin="80"
+            Animation="LottieLogo.json"
+            AnimationSource="AssetOrBundle"
+            BackgroundColor="#D1BAAC"
+            Command="{Binding PlayCommand}"
+            HeightRequest="200"
+            HorizontalOptions="FillAndExpand"
+            RepeatMode="Infinite"
+            VerticalOptions="FillAndExpand" />
+    </Grid>
+
+</ContentPage>

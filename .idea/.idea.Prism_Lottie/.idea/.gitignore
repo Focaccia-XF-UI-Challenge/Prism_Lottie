@@ -1,0 +1,13 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/projectSettingsUpdater.xml
+/modules.xml
+/.idea.Prism_Lottie.iml
+/contentModel.xml
+# Datasource local storage ignored files
+/../../../../../../../../:\Users\Administrator\Downloads\Prism_Lottie\.idea\.idea.Prism_Lottie\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
